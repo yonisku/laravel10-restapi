@@ -17,7 +17,7 @@ class PostController extends Controller
         $posts = Post::latest()->paginate(5);
 
         //return collection of posts as a resource
-        return new PostResource(true, 'List Data Posts', $posts);
+        return new PostResource(true, 'List Data', $posts);
     }
 
     public function store(Request $request)
